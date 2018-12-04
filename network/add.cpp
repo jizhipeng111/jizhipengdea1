@@ -10,7 +10,7 @@ using std::endl;
 //添加一个新的边到网络拓扑中并将其读入文件中
 void addedge(int node, int **w) {
 	int r1, r2, weight; //存储新加入的边及其权值
-
+//l love you 
 	cout << "请输入要加入的边（r1,r2,weight）:(输入0，0，0退出)" << endl;
 	while (cin >> r1 >> r2 >> weight) {
 		if (r1 == 0 && r2 == 0)break;
