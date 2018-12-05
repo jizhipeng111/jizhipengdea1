@@ -6,7 +6,7 @@
 using std::cin;
 using std::cout;
 using std::endl;
-
+//  123456789
 //添加一个新的边到网络拓扑中并将其读入文件中
 void addedge(int node, int **w) {
 	int r1, r2, weight; //存储新加入的边及其权值
