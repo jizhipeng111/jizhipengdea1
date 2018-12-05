@@ -1,4 +1,3 @@
-
 #include "add.h"
 #include "write.h"
 #include <iostream>
@@ -14,7 +13,7 @@ void addedge(int node, int **w) {
 	cout << "请输入要加入的边（r1,r2,weight）:(输入0，0，0退出)" << endl;
 	while (cin >> r1 >> r2 >> weight) {
 		if (r1 == 0 && r2 == 0)break;
-		else 
+		else
 			w[r1 - 1][r2 - 1] = weight;
 	}
 	write(node, w);
