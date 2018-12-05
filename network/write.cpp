@@ -28,4 +28,5 @@ void write(int node, int **a) {//m表示结点的个数
 		delete[] a[i];
 	}
 	delete[] a;*/
+	cout << "计算机网";
 }
