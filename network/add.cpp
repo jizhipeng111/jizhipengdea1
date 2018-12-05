@@ -1,4 +1,3 @@
-
 #include "add.h"
 #include "write.h"
 #include <iostream>
@@ -6,16 +5,15 @@
 using std::cin;
 using std::cout;
 using std::endl;
-//  123456789
+
 //添加一个新的边到网络拓扑中并将其读入文件中
 void addedge(int node, int **w) {
 	int r1, r2, weight; //存储新加入的边及其权值
-//l love you 
-	//i love study
+
 	cout << "请输入要加入的边（r1,r2,weight）:(输入0，0，0退出)" << endl;
 	while (cin >> r1 >> r2 >> weight) {
 		if (r1 == 0 && r2 == 0)break;
-		else 
+		else
 			w[r1 - 1][r2 - 1] = weight;
 	}
 	write(node, w);
@@ -33,11 +31,23 @@ void addnode(int node, int **w) {
 			b[i][j] = w[i][j];
 		}
 	}
-	cout << "请输入新加入的结点产生新边的权值：" << endl;
+
+
 	for (int k = 0; k < node + 1; ++k) {
-		cout << node + 1 << " " << k + 1 << ": ";
-		cin >> b[node][k];
+		b[node][k] = 999;
 	}
+	b[node][node] = 0;
+	int count;
+	cout << "请输入与之相连的结点数：";
+	cin >> count;
+	int nod;
+	for (int i = 0; i < count; ++i) {
+		cout << "请输入与之相连的结点：";
+		cin >> nod;
+		cout << "请输入权值：";
+		cin >> b[node][nod - 1];
+	}
+
 	for (int m = 0; m < node + 1; ++m) {
 		b[m][node] = b[node][m];
 	}
